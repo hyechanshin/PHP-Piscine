@@ -1,0 +1,46 @@
+body {
+  position: relative;
+  min-width: 1890px;
+  min-height: 910px;
+  color: black;
+  background-color: #505050;
+}
+
+.top {
+  width: 1400px;
+  height: 120px;
+  border: 10px;
+  border-style: solid;
+  border-color: #909090;
+  color: black;
+  background-color: #909091;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  position: relative;
+  width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.small {
+  height: 20px;
+  width: 20px;
+  float: right;
+}
+
+#top_image {
+  height: 120px;
+  float: left;
+}
+
+#loupe {
+  float: left;
+  margin-left: 659px;
+}
