@@ -1,0 +1,93 @@
+table {
+  text-align: center;
+  vertical-align: middle;
+  font-family: Arial;
+  margin-left: auto;
+  margin-right: auto;
+  page-break-inside: avoid;
+}
+td {
+  font-size: 1.9vw;
+  font-weight: bold;
+  page-break-inside: avoid;
+  width: 5.5vw;
+  padding: 0.1vw;
+}
+
+th {
+  color: black;
+  background-color: #d8ffee;
+  font-size: 1.3vw;
+  line-height: 2vw;
+  height: 1vw;
+}
+
+
+.alkalimetal {
+  background-color: #a0ffa0;
+
+}
+.alkaliearth {
+  background-color: #c0ffff;
+
+}
+.transitionmetal {
+  background-color: #FF6666
+}
+.basicmetal {
+  background-color: #FFDEAD;
+
+}
+.semimetal {
+  background-color: #cccc99;
+
+}
+
+.nonmetal {
+  background-color: #cccccc;
+
+}
+.halogen {
+  background-color: #ffff99;
+
+}
+.noblegas {
+  background-color: #ffc0c0;
+
+}
+.lanthanide {
+  background-color: #FFBFFF;
+
+}
+.actinide {
+  background-color: #ef99cc;
+}
+.atomicweight {
+  text-align: right;
+  font-weight: normal;
+  font-size: 0.9vw;
+  margin: 0.2vw 0.2vw 0.4vw 0.2vw;;
+}
+.atomicnum {
+  text-align: left;
+  font-weight: normal;
+  font-size: 0.9vw;
+  margin: 0.4vw 0.2vw 0.2vw 0.2vw;
+}
+.nav {
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 0.9vw;
+  margin: 0.2vw 0.2vw 0.2vw 0.2vw;
+}
+table img {
+  width: 13vw;
+}
+
+td img {
+  height: 14vw;
+}
+
+td b {
+  font-size: 3.5vw;
+}
