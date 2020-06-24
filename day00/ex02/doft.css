@@ -1,9 +1,15 @@
+p {
+  font-size: 0.8vw;
+  margin:0;
+  font-family: Verdana;
+}
 body {
-  position: relative;
+  position: block;
+  color: black;
+  width: 70%;
   min-width: 1890px;
   min-height: 910px;
-  color: black;
-  background-color: #505050;
+  background-color: #808080;
 }
 
 .top {
@@ -29,10 +35,65 @@ body {
   text-align: center;
 }
 
+.left {
+  width: 8%;
+  height: auto;
+  padding: 1%;
+  float: left;
+  padding-bottom: 2%;
+  border: 10px;
+  border-style: solid;
+  border-color: #909090;
+  color: black;
+  background-color: #909091;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.middle {
+  display: inline-block;
+  width: 70%;
+  padding: 1%;
+  z-index: 1;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  background-color: #909091;
+}
+
+#cluster {
+  width: 100%;
+  display: block;
+  margin: auto;
+  z-index: 2;
+  height: 100%;
+}
+
+.right {
+  width: 8%;
+  height: auto;
+  float: right;
+  padding: 1%;
+  padding-bottom: 2%;
+  border: 10px;
+  border-style: solid;
+  border-color: #909090;
+  color: black;
+  background-color: #909091;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .small {
   height: 20px;
   width: 20px;
   float: right;
+  margin-left: 700px;
 }
 
 #top_image {
@@ -42,5 +103,101 @@ body {
 
 #loupe {
   float: left;
-  margin-left: 659px;
+  margin-left: 600px;
+  width:15%;
+  position: absolute;
+  z-index: 2;
+}
+
+.icon {
+  display:block;
+  width:60%;
+  margin:auto;
+  margin-top:15%;
+}
+
+#look {
+  margin-top:15%;
+  border: 4px solid red;
+  border-radius: 13px;
+}
+
+#book {
+  display:block;
+  width:60%;
+  margin:auto;
+  margin-top:10%;
+}
+
+#towel {
+  display:block;
+  width:60%;
+  margin:auto;
+  margin-top:10%;
+}
+
+.brick {
+    display: block;
+    width: 30%;
+    visibility: hidden;
+}
+
+#bricks {
+  display: block;
+  background : url("resources/brick.jpg");
+  background-repeat: repeat;
+  background-size: 27%;
+}
+
+.p {
+  font-size: 0.8vw;
+  margin: 0;
+  font-family: Verdana;
+}
+
+#big_word {
+  font-size: 2vw;
+  font-family: Georgia;
+}
+
+#ordinateur {
+  text-shadow: 6px 6px 5px red;
+}
+
+#italic {
+  font-style: italic;
+}
+.form {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  float: left;
+  background-color: #98FB98;
+  width: 36%;
+  height: auto;
+  z-index: 2;
+  margin-top: -4%;
+  margin-left: -6%;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  padding: 1%;
+  padding-bottom: 5%;
+}
+
+#ikea {
+  width: 10%;
+  height: 140px;
+  float: right;
+  margin-top: -22%;
+  margin-right: 57%;
+  position: relative;
+}
+
+#apple {
+  width: 20%;
+  height: 140px;
+  float: right;
+  margin-top: -25%;
+  margin-right: 1%;
+  position: relative;
 }
