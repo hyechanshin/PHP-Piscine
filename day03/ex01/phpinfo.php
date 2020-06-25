@@ -1,4 +1,3 @@
-#!/usr/bin/php
-<?PHP
-phpinfo();
+<?php
+    phpinfo();
 ?>
