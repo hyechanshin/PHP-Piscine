@@ -4,9 +4,9 @@
             mkdir('../private');
         }
         if (!file_exist('../private/passwd')) {
-            file_put_contents('../private/passwd', null);+
+            file_put_contents('../private/passwd', null);
         }
-        $user_acc = unserialize(file_get_contents('../htdocs/private/passwd'));
+        $user_acc = unserialize(file_get_contents('../private/passwd'));
         if ($user_acc) {
             $exist = 0;
             foreach ($user_acc as $k => $v) {
@@ -20,7 +20,7 @@
             $tmp['login'] = $_POST['login'];
             $tmp['passwd'] = hash('whirlpool', $_POST['passwd']);
             $user_acc[] = $tmp;
-			file_put_contents('../htdocs/private/passwd', serialize($user_acc));
+			file_put_contents('../private/passwd', serialize($user_acc));
 			echo "OK\n";
         }
     } else {
