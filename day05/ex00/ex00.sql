@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS `db_hyshin`;
+CREATE DATABASE db_hyshin;

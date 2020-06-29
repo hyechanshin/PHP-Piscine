@@ -1,1 +1,3 @@
-DELETE FROM ft_table LIMIT 5;
+DELETE FROM ft_table
+ORDER BY `id` ASC
+LIMIT 5;
