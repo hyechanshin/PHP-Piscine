@@ -15,6 +15,7 @@
     </style>
     <script>
       const colors = ["red", "green", "blue"];
+      const revColors = ["blue", "green", "red"]
       var colorIndex = 0;
       var size = 200;
 
@@ -22,11 +23,12 @@
         console.log("Test");
   		  const balloon = document.getElementById('balloon');
   		  balloon.addEventListener("click", clickBalloon);
+        balloon.addEventListener("mouseleave", leaveBalloon);
   		};
+
 
       function clickBalloon() {
         console.log("clicked");
-        var bSize = document.getElementById('balloon');
         size += 10;
         if (size > 420)
           size = 200;
@@ -36,10 +38,38 @@
         checkBalloon(colorIndex);
       }
 
+      function leaveBalloon() {
+        const balloon = document.getElementById('balloon');
+        if (size > 200) {
+          size -= 5;
+          balloon.style.margin = 5 - "%";
+        }
+        colorIndex++;
+        if (colorIndex > 2)
+          colorIndex = 0;
+        checkBalloon2(colorIndex);
+      }
+
       function checkBalloon() {
         balloon.style.height = size + "px";
         balloon.style.width = size + "px";
         balloon.style.margin = 10 + "%";
+        balloon.style.backgroundColor = colors[colorIndex];
+      }
+      function checkBalloon2() {
+        balloon.style.height = size + "px";
+        balloon.style.width = size + "px";
+        switch(colorIndex) {
+          case "0":
+            colorIndex = "2";
+            break;
+          case "1":
+            colorIndex = "0";
+            break;
+          case "2":
+            colorIndex = "1";
+            break;
+        }
         balloon.style.backgroundColor = colors[colorIndex];
       }
     </script>
