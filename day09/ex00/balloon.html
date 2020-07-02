@@ -15,7 +15,6 @@
     </style>
     <script>
       const colors = ["red", "green", "blue"];
-      const revColors = ["blue", "green", "red"]
       var colorIndex = 0;
       var size = 200;
 
@@ -44,7 +43,17 @@
           size -= 5;
           balloon.style.margin = 5 - "%";
         }
-        colorIndex++;
+        switch(colorIndex) {
+          case 0:
+            colorIndex = 2;
+            break;
+          case 1:
+            colorIndex = 0;
+            break;
+          case 2:
+            colorIndex = 1;
+            break;
+        }
         if (colorIndex > 2)
           colorIndex = 0;
         checkBalloon2(colorIndex);
@@ -59,17 +68,6 @@
       function checkBalloon2() {
         balloon.style.height = size + "px";
         balloon.style.width = size + "px";
-        switch(colorIndex) {
-          case "0":
-            colorIndex = "2";
-            break;
-          case "1":
-            colorIndex = "0";
-            break;
-          case "2":
-            colorIndex = "1";
-            break;
-        }
         balloon.style.backgroundColor = colors[colorIndex];
       }
     </script>
