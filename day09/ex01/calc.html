@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style>
+      form select {
+        font-size: 20px;
+        padding: 5px;
+      }
+      form #submit {
+        font-size: 20px;
+        padding: 5px;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        setInterval("alert('Please, use me...')", 3000000)
+      };
+      function calc(form) {
+        const op = form.elements["op"].value;
+        var val1 = form.elements["val1"].value;
+        var val2 = form.elements["val2"].value;
+        if (!isNumber(val1) || !isNumber(val2)) {
+          alert('Error :(');
+          return false;
+        }
+        else {
+            val1 = parseInt(val1, 10);
+            val2 = parseInt(val2, 10);
+            if (val1 < 0 || val2 < 0) {
+              alert('Error :(');
+              return false;
+            }
+            switch (op) {
+              case ("+"):
+                result(val1 + val2);
+                break;
+              case ("-"):
+                result(val1 - val2);
+                break;
+              case ("*"):
+                result(val1 * val2);
+                break;
+              case ("/"):
+                if (val2 == 0) {
+                  alert("It’s over 9000!");
+                } else {
+                    result(val1 / val2);
+                    break;
+                }
+              case ("%"):
+              if (val2 == 0) {
+                alert("It’s over 9000!");
+              } else {
+                  result(val1 % val2);
+                  break;
+              }
+            }
+        }
+      }
+      function result(value) {
+    		console.log(value);
+    		alert(value);
+      }
+
+		function isNumber(n) {
+			return !isNaN(parseFloat(n)) && !isNaN(n - 0);
+		}
+    </script>
+  </head>
+  <body>
+    <form id="calcform" onsubmit="calc(this)" action="">
+    	<input id="val1" type="text">
+    	<select name="op" type="text">
+    		<option value="+">+</option>
+    		<option value="-">-</option>
+    		<option value="*">*</option>
+    		<option value="/">/</option>
+    		<option value="%">%</option>
+    	</select>
+    	<input id="val2" type="text">
+    	<button id="submit" name="submit" value="OK">Try me!</button>
+    </form>
+  </body>
+</html>
