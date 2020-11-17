@@ -1,4 +1,8 @@
 SELECT `name`
 FROM `distrib`
-WHERE (`id_distrib` IN (42, 62, 63, 64, 65, 66, 67, 68, 69, 71, 88, 89, 90)) OR LOWER(`name`) LIKE '%y%y%'
-LIMIT 2, 5;
+WHERE (id_distrib = 42) or
+	((id_distrib >= 62) and (id_distrib <= 69)) or
+	(id_distrib = 71) or
+	((id_distrib >= 88) and (id_distrib <= 90)) or
+	(lower(name) like '%y%y%')
+	limit 5 offset 2;

@@ -1,4 +1,6 @@
-SELECT count(*) AS `movies`
+SELECT COUNT(`id_film`) AS `movies`
 FROM `member_history`
-WHERE ((`date` BETWEEN '2006-10-30' AND '2007-07-27')
-    OR (MONTH(`date`) = 12 AND DAY(`date`) = 24));
+WHERE
+    (DATE(`date`) < DATE('2007-07-27') AND
+    DATE(`date`) > DATE('2006-12-24')) OR
+    (MONTH(`date`) = '12' AND DAY(`date`) = '24');
