@@ -1,15 +1,14 @@
 <?php
+    class NightsWatch implements IFighter{
+        public $result;
 
-    class NightsWatch implements IFighter {
-        public $_fight;
-
-        public function recruit($char) {
-            if ($char instanceof IFighter) {
-                $_fight = $char->fight();
+        public function recruit($value){
+            if ($value instanceof IFighter){
+                $result = $value->fight();
             }
         }
-        public function fight() {
+        public function fight(){
+            echo($result);
         }
     }
-
 ?>
