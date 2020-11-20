@@ -28,33 +28,53 @@
         else {
             val1 = parseInt(val1, 10);
             val2 = parseInt(val2, 10);
-            if (val1 = 0 || val2 = 0) {
-              alert('Error :(');
-              return false;
-            }
             switch (op) {
               case ("+"):
-                result(val1 + val2);
-                break;
+                if (val1 <= 0 || val2 <= 0) {
+                  alert('Error :(');
+                  return false;
+                }
+                else
+                  result(val1 + val2);
+                  break;
               case ("-"):
-                result(val1 - val2);
-                break;
+              if (val1 <= 0 || val2 <= 0) {
+                  alert('Error :(');
+                  return false;
+                }
+                else
+                  result(val1 - val2);
+                  break;
               case ("*"):
-                result(val1 * val2);
-                break;
+              if (val1 <= 0 || val2 <= 0) {
+                  alert('Error :(');
+                  return false;
+                }
+                else
+                  result(val1 * val2);
+                  break;
               case ("/"):
-                if (val2 == 0) {
-                  alert("It’s over 9000!");
-                } else {
+              if (val1 < 0 || val2 < 0) {
+                  alert('Error :(');
+                  return false;
+              }
+              else if (val1 === 0 || val2 === 0) {
+                alert("It’s over 9000!");
+                break;
+              } else {
                     result(val1 / val2);
                     break;
-                }
+              }
               case ("%"):
-              if (val2 == 0) {
+              if (val1 < 0 || val2 < 0) {
+                  alert('Error :(');
+                  return false;
+              }
+              else if (val1 === 0 || val2 === 0) {
                 alert("It’s over 9000!");
               } else {
-                  result(val1 % val2);
-                  break;
+                    result(val1 % val2);
+                    break;
               }
             }
         }
